@@ -1,4 +1,4 @@
-colors = [
+const colors = [
   "#f79e74",
   "#89d5f9",
   "#50d855",
@@ -18,7 +18,9 @@ colors = [
   "#099a90"
 ]
 
-const colorchanger = () => {
+const colorChanger = () => {
   let choice = Math.floor(Math.random() * 17)
   return colors[choice]
 }
+
+export { colorChanger }

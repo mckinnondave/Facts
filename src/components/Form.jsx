@@ -1,9 +1,16 @@
 import React, { useState } from "react";
 import "./Form.scss";
+import { colorChanger } from "../helpers/colorchange";
+
 
 export default function Form() {
   const axios = require("axios");
   const [quote, setQuote] = useState("Lettuce is a member of the sunflower family.");
+  const [color, setColor] = useState("#c8beb6")
+
+  let myColor = {
+    backgroundColor: color
+  }
 
   const request = () => {
     const options = {
@@ -27,12 +34,12 @@ export default function Form() {
   };
 
   return (
-    <div className="form">
+    <div className="form" style={myColor}>
       <div className="form-top">
         <div className="form-quote">{quote}</div>
       </div>
       <div className="form-bottom">
-        <button className="form-button" onClick={() => setQuote(request())}>
+        <button className="form-button" onClick={() => {setQuote(request()); setColor(colorChanger())}}>
           Next Fact!
         </button>
       </div>
