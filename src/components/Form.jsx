@@ -3,11 +3,9 @@ import "./Form.scss";
 
 export default function Form() {
   const axios = require("axios");
-  const [quote, setQuote] = useState("Bees sometimes sting other bees.");
-  console.log("QUOTE", quote);
-  
+  const [quote, setQuote] = useState("Lettuce is a member of the sunflower family.");
+
   const request = () => {
-    
     const options = {
       method: "GET",
       url: "https://random-facts2.p.rapidapi.com/getfact",
@@ -21,7 +19,7 @@ export default function Form() {
       .request(options)
       .then(function (response) {
         let result = response.data.Fact;
-        setQuote(result)
+        setQuote(result);
       })
       .catch(function (error) {
         console.error(error);
@@ -30,10 +28,14 @@ export default function Form() {
 
   return (
     <div className="form">
-      <div>{quote}</div>
-      <button className="form-button" onClick={() => setQuote(request())}>
-        Next
-      </button>
+      <div className="form-top">
+        <div className="form-quote">{quote}</div>
+      </div>
+      <div className="form-bottom">
+        <button className="form-button" onClick={() => setQuote(request())}>
+          Next Fact!
+        </button>
+      </div>
     </div>
   );
 }
