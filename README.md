@@ -1,6 +1,6 @@
-## Fact Generator
+## Facts!
 
-A quick project to spend more time with React and create a random fact generator using "Random Facts" by APILAB.
+A quick and simple project to spend more time with React and create a random fact generator using "Random Facts" by APILAB.
 
 ### Setup
 
