@@ -5,8 +5,8 @@ import Form from "./components/Form";
 function App() {
   const axios = require("axios");
   let result;
-
   const request = () => {
+    
     const options = {
       method: "GET",
       url: "https://random-facts2.p.rapidapi.com/getfact",
@@ -15,24 +15,23 @@ function App() {
         "X-RapidAPI-Key": `${process.env.REACT_APP_API_KEY}`,
       },
     };
-  
+
     axios
       .request(options)
       .then(function (response) {
-        result = response.data.Fact
-        console.log(response.data.Fact);
+        result = response.data.Fact;
       })
       .catch(function (error) {
         console.error(error);
       });
-
-    return result
-    
-  }
-
-  return <div className="app">
-    <Form request={request}/>
-  </div>;
+    return result;
+  };
+  
+  return (
+    <div className="app">
+      <Form request={request} />
+    </div>
+  );
 }
 
 export default App;
