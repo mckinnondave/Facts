@@ -1,8 +1,14 @@
-# Getting Started with Create React App
+## Fact Generator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A quick project to spend more time with React and create a random fact generator using "Random Facts" by APILAB.
 
-## Available Scripts
+### Setup
+
+1. Download dependencies using `npm i`
+2. Go to [API page](https://rapidapi.com/APILAB/api/random-facts2) to subscribe and get an API key
+3. 
+
+
 
 In the project directory, you can run:
 
